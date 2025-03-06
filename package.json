@@ -7,9 +7,10 @@
     "test": "test"
   },
   "scripts": {
-    "dev": "npx vite",
-    "build": "npx vite build",
-    "preview": "npx vite preview"
+  "dev": "npx vite",
+  "build": "chmod +x node_modules/.bin/vite && npx vite build",
+  "preview": "npx vite preview",
+  "postinstall": "chmod +x node_modules/.bin/vite"
   },
   "author": "",
   "license": "ISC",
