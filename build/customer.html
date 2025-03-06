@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Portal - Agricultural Blockchain</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="./app.css" rel="stylesheet" type="text/css">
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="header">
+      <h1>Agricultural Supply Chain Dapp</h1>
+      <h4>Public Id: <span id="SenderBalance"></span></h4>
+    </div>
+
+    <div class="nav-container">
+      <a href="farmer.html" class="nav-button farmer">Farmer</a>
+      <a href="quality.html" class="nav-button quality">Quality Testing</a>
+      <a href="customer.html" class="nav-button customer active">Customer</a>
+      <a href="finance.html" class="nav-button finance">Micro-Finance</a>
+    </div>
+
+    <div class="form-container customer-form">
+      <h2 class="form-title">Product Verification</h2>
+      
+      <div class="form-group">
+        <input type="text" id="getfid" placeholder="Farmer Id">
+        <input type="text" id="lotnum" placeholder="Lot Number">
+      </div>
+      
+      <button type="button" class="btn-submit" id="getcustval" onclick="getQ();cgetQ();">Get Product Details</button>
+      
+      <h3>Farmer Information</h3>
+      <table>
+        <tr><td>Farmer Id</td><td>:</td><td><span id="cgetval1"></span></td></tr>
+        <tr><td>Farmer Name</td><td>:</td><td><span id="cgetval2"></span></td></tr>
+        <tr><td>Location</td><td>:</td><td><span id="cgetval3"></span></td></tr>
+        <tr><td>Crop</td><td>:</td><td><span id="cgetval4"></span></td></tr>
+        <tr><td>Phone</td><td>:</td><td><span id="cgetval5"></span></td></tr>
+        <tr><td>Quantity</td><td>:</td><td><span id="cgetval6"></span></td></tr>
+        <tr><td>Expected price</td><td>:</td><td><span id="cgetval7"></span></td></tr>
+      </table>
+      
+      <h3>Quality Information</h3>
+      <table>
+        <tr><td>Lot Number</td><td>:</td><td><span id="cgetval8"></span></td></tr>
+        <tr><td>Grade</td><td>:</td><td><span id="cgetval9"></span></td></tr>
+        <tr><td>MRP</td><td>:</td><td><span id="cgetval10"></span></td></tr>
+        <tr><td>Test Date</td><td>:</td><td><span id="cgetval11"></span></td></tr>
+        <tr><td>Expiry Date</td><td>:</td><td><span id="cgetval12"></span></td></tr>
+      </table>
+    </div>
+  </div>
+</body>
+</html>
+Last edited 24 minutes ago
+
+

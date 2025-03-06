@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Farmer Portal - Agricultural Blockchain</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="./app.css" rel="stylesheet" type="text/css">
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="header">
+      <h1>Agricultural Supply Chain Dapp</h1>
+      <h4>Public Id: <span id="SenderBalance"></span></h4>
+    </div>
+
+    <div class="nav-container">
+      <a href="farmer.html" class="nav-button farmer active">Farmer</a>
+      <a href="quality.html" class="nav-button quality">Quality Testing</a>
+      <a href="customer.html" class="nav-button customer">Customer</a>
+      <a href="finance.html" class="nav-button finance">Micro-Finance</a>
+    </div>
+
+    <div class="form-container farmer-form">
+      <h2 class="form-title">Farmer Registration</h2>
+      
+      <div class="form-group">
+        <input type="text" id="fid" placeholder="Farmer Id">
+        <input type="text" id="fname" placeholder="Farmer's Name">
+        <input type="text" id="loc" placeholder="Location">
+        <input type="text" id="crop" placeholder="Crop Name">
+        <input type="text" id="contact" placeholder="Phone Number">
+        <input type="text" id="quantity" placeholder="Quantity">
+        <input type="text" id="exprice" placeholder="Expected Price">
+      </div>
+      
+      <button type="button" class="btn-submit" id="setvalue" onclick="set()">Submit Details</button>
+      <span id="status"></span>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Micro-Finance - Agricultural Blockchain</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="./app.css" rel="stylesheet" type="text/css">
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="header">
+      <h1>Agricultural Supply Chain Dapp</h1>
+      <h4>Public Id: <span id="SenderBalance"></span></h4>
+    </div>
+
+    <div class="nav-container">
+      <a href="farmer.html" class="nav-button farmer">Farmer</a>
+      <a href="quality.html" class="nav-button quality">Quality Testing</a>
+      <a href="customer.html" class="nav-button customer">Customer</a>
+      <a href="finance.html" class="nav-button finance active">Micro-Finance</a>
+    </div>
+
+    <div class="form-container finance-form">
+      <h2 class="form-title">Micro-Finance Portal</h2>
+      
+      <div class="form-group">
+        <input type="text" id="pfid" placeholder="Farmer Id">
+        <input type="text" id="lotnum" placeholder="Lot Number">
+        <input type="text" id="amount" placeholder="Fund Amount">
+      </div>
+      
+      <table>
+        <tr><td>Balance</td><td>:</td><td><span id="balance"></span>$</td></tr>
+      </table>
+      
+      <button type="button" class="btn-submit" id="getfund" onclick="fund()">Fund Farmer</button>
+      <span id="status"></span>
+    </div>
+  </div>
+</body>
+</html>

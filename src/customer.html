@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Portal - KILIMO</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link href="./app.css" rel="stylesheet" type="text/css">
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <div class="app-container">
+    <header class="app-header">
+      <h1 class="app-title">KILIMO</h1>
+      <p class="app-subtitle">Public ID: <span class="public-id" id="SenderBalance">0x7Fd5...3F42</span></p>
+    </header>
+
+    <div class="nav-tabs">
+        <a href="index.html" class="nav-tab farmer">
+            <i class="bi bi-person-fill-gear nav-tab-icon"></i>
+            Home
+        </a>
+      <a href="farmer.html" class="nav-tab farmer">
+        <i class="bi bi-person-fill-gear nav-tab-icon"></i>
+        Farmer Portal
+      </a>
+      <a href="quality.html" class="nav-tab quality">
+        <i class="bi bi-clipboard2-check nav-tab-icon"></i>
+        Quality Testing
+      </a>
+      <a href="customer.html" class="nav-tab customer active">
+        <i class="bi bi-cart3 nav-tab-icon"></i>
+        Customer
+      </a>
+      <a href="finance.html" class="nav-tab finance">
+        <i class="bi bi-bank nav-tab-icon"></i>
+        Micro-Finance
+      </a>
+    </div>
+
+    <div class="card customer fade-in">
+      <div class="card-header">
+        <h2 class="card-title">Product Verification</h2>
+        <p class="card-subtitle">Check the details and quality of agricultural products</p>
+      </div>
+      
+      <div class="card-body">
+        <div class="form-group">
+          <label class="form-label" for="getfid">Farmer ID</label>
+          <input type="text" class="form-control" id="getfid" placeholder="Enter Farmer ID">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="lotnum">Lot Number</label>
+          <input type="text" class="form-control" id="lotnum" placeholder="Enter Lot Number">
+        </div>
+        
+        <button type="button" class="btn btn-customer btn-block" id="getcustval" onclick="getQ();cgetQ();">
+          <i class="bi bi-search"></i> Get Product Details
+        </button>
+        
+        <h3>Farmer Information</h3>
+        <table class="info-table">
+          <tr><td>Farmer ID</td><td><span id="cgetval1"></span></td></tr>
+          <tr><td>Farmer Name</td><td><span id="cgetval2"></span></td></tr>
+          <tr><td>Location</td><td><span id="cgetval3"></span></td></tr>
+          <tr><td>Crop</td><td><span id="cgetval4"></span></td></tr>
+          <tr><td>Phone</td><td><span id="cgetval5"></span></td></tr>
+          <tr><td>Quantity</td><td><span id="cgetval6"></span></td></tr>
+          <tr><td>Expected Price</td><td><span id="cgetval7"></span></td></tr>
+        </table>
+        
+        <h3>Quality Information</h3>
+        <table class="info-table">
+          <tr><td>Lot Number</td><td><span id="cgetval8"></span></td></tr>
+          <tr><td>Grade</td><td><span id="cgetval9"></span></td></tr>
+          <tr><td>MRP</td><td><span id="cgetval10"></span></td></tr>
+          <tr><td>Test Date</td><td><span id="cgetval11"></span></td></tr>
+          <tr><td>Expiry Date</td><td><span id="cgetval12"></span></td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

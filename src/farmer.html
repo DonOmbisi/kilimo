@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Farmer Portal - KILIMO</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link href="./app.css" rel="stylesheet" type="text/css">
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <div class="app-container">
+    <header class="app-header">
+      <h1 class="app-title">KILIMO</h1>
+      <p class="app-subtitle">Public ID: <span class="public-id" id="SenderBalance">0x7Fd5...3F42</span></p>
+    </header>
+
+    <div class="nav-tabs">
+        <a href="index.html" class="nav-tab farmer">
+            <i class="bi bi-person-fill-gear nav-tab-icon"></i>
+            Home
+        </a>  
+      <a href="farmer.html" class="nav-tab farmer active">
+        <i class="bi bi-person-fill-gear nav-tab-icon"></i>
+        Farmer Portal
+      </a>
+      <a href="quality.html" class="nav-tab quality">
+        <i class="bi bi-clipboard2-check nav-tab-icon"></i>
+        Quality Testing
+      </a>
+      <a href="customer.html" class="nav-tab customer">
+        <i class="bi bi-cart3 nav-tab-icon"></i>
+        Customer
+      </a>
+      <a href="finance.html" class="nav-tab finance">
+        <i class="bi bi-bank nav-tab-icon"></i>
+        Micro-Finance
+      </a>
+    </div>
+
+    <div class="card farmer fade-in">
+      <div class="card-header">
+        <h2 class="card-title">Farmer Registration</h2>
+        <p class="card-subtitle">Register your crop details for certification and sale</p>
+      </div>
+      
+      <div class="card-body">
+        <div class="form-group">
+          <label class="form-label" for="fid">Farmer ID</label>
+          <input type="text" class="form-control" id="fid" placeholder="Enter your unique farmer ID">
+        </div>
+        
+        <div class="form-row">
+          <div class="form-col">
+            <div class="form-group">
+              <label class="form-label" for="fname">Full Name</label>
+              <input type="text" class="form-control" id="fname" placeholder="Your full name">
+            </div>
+          </div>
+          
+          <div class="form-col">
+            <div class="form-group">
+              <label class="form-label" for="contact">Phone Number</label>
+              <input type="text" class="form-control" id="contact" placeholder="Your contact number">
+            </div>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label class="form-label" for="loc">Location</label>
+          <input type="text" class="form-control" id="loc" placeholder="Farm location or address">
+        </div>
+        
+        <div class="form-row">
+          <div class="form-col">
+            <div class="form-group">
+              <label class="form-label" for="crop">Crop Name</label>
+              <input type="text" class="form-control" id="crop" placeholder="Type of crop">
+            </div>
+          </div>
+          
+          <div class="form-col">
+            <div class="form-group">
+              <label class="form-label" for="quantity">Quantity (kg)</label>
+              <input type="text" class="form-control" id="quantity" placeholder="Total quantity">
+            </div>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label class="form-label" for="exprice">Expected Price (per kg)</label>
+          <input type="text" class="form-control" id="exprice" placeholder="Your expected price">
+        </div>
+      </div>
+      
+      <div class="card-footer">
+        <button type="button" class="btn btn-farmer btn-block" id="setvalue" onclick="set()">
+          <i class="bi bi-check-circle"></i> Submit Registration
+        </button>
+        <div id="status" class="status-message"></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

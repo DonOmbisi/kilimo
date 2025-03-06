@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quality Testing - Agricultural Blockchain</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link href="./app.css" rel="stylesheet" type="text/css">
+  <script src="./app.js" defer></script>
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+          <h1 class="app-title">KILIMO</h1>
+          <p class="app-subtitle">Public ID: <span class="public-id" id="SenderBalance">0x7Fd5...3F42</span></p>
+        </header>
+
+        <div class="nav-tabs">
+            <a href="index.html" class="nav-tab farmer">
+                <i class="bi bi-person-fill-gear nav-tab-icon"></i>
+                Home
+            </a>
+            <a href="farmer.html" class="nav-tab farmer active">
+              <i class="bi bi-person-fill-gear nav-tab-icon"></i>
+              Farmer Portal
+            </a>
+            <a href="quality.html" class="nav-tab quality">
+              <i class="bi bi-clipboard2-check nav-tab-icon"></i>
+              Quality Testing
+            </a>
+            <a href="customer.html" class="nav-tab customer">
+              <i class="bi bi-cart3 nav-tab-icon"></i>
+              Customer
+            </a>
+            <a href="finance.html" class="nav-tab finance">
+              <i class="bi bi-bank nav-tab-icon"></i>
+              Micro-Finance
+            </a>
+          </div>
+          
+          <div class="card farmer fade-in">
+            <div class="card-header">
+            <h2 class="form-title">Quality Testing</h2>
+            
+            <div class="card-body">
+                <div class="form-group">
+                    <input type="text" id="fid1" placeholder="Farmer Id">
+                </div>
+      
+      <button type="button" class="btn-submit" id="getvalue" onclick="get();">Get Farmer Data</button>
+      
+      <table>
+        <tr><td>Farmer Name</td><td>:</td><td><span id="getval2"></span></td></tr>
+        <tr><td>Location</td><td>:</td><td><span id="getval3"></span></td></tr>
+        <tr><td>Crop</td><td>:</td><td><span id="getval4"></span></td></tr>
+        <tr><td>Phone</td><td>:</td><td><span id="getval5"></span></td></tr>
+        <tr><td>Quantity</td><td>:</td><td><span id="getval6"></span></td></tr>
+        <tr><td>Expected price</td><td>:</td><td><span id="getval7"></span></td></tr>
+      </table>
+      
+      <div class="button-group">
+        <button type="button" id="printBlock" class="secondary-btn" onclick="printBlock()">Print Block</button>
+        <button type="button" id="printTransaction" class="secondary-btn" onclick="printTransaction()">Print Transaction</button>
+      </div>
+      
+      <div class="block-status">
+        <h4>Block Number: <span id="blocknum"></span></h4>
+      </div>
+      
+      <button type="button" class="btn-submit" id="Approve-btn" onclick="showApproveForm()">Approve Details</button>
+    </div>
+
+    <div class="form-container quality-form" id="approve-form" style="display:none;">
+      <h2 class="form-title">Product Details</h2>
+      
+      <div class="form-group">
+        <input type="text" id="lotno" placeholder="Lot Number">
+        <input type="text" id="grade" placeholder="Grade">
+        <input type="text" id="mrp" placeholder="MRP">
+        <input type="text" id="testdate" placeholder="Test Date">
+        <input type="text" id="expdate" placeholder="Expiry Date">
+      </div>
+      
+      <button type="button" class="btn-submit" id="setvalue" onclick="setQ()">Submit</button>
+      <span id="status"></span>
+    </div>
+  </div>
+
+  <script>
+    function showApproveForm() {
+      document.getElementById('approve-form').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
